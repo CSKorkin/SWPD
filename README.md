@@ -3,7 +3,7 @@ Plagiarism Detector for SolidWorks files... (or anything?)
 
 ## Topics for discussion
 * **GUI?** I'm really tempted to have us make this a GUI app. (Kiesel)
-* **Python GUI?** I'm equally tempted to do the GUI stuff in something easy like Python and have the big irondata processing guts use C++.
+* **Python GUI?** I'm equally tempted to do the GUI stuff in something easy like Python and have the big data processing guts use C++.
 
 ## Basic plan (non-GUI part)
 The program needs to perform a series of tasks
