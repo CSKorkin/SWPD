@@ -3,11 +3,12 @@
 #include <stdlib.h>
 
 
-//Main. argc is the number of arguments passed from the command line, which is how the GUI will interact with the C++ program.
-//argc will always be >=1 as the first argument is always the name of the program.
+//The main function, which is called when the program is executed.
 //Note that "int argc, char *argv[]" is the same reason that the main method in Java has "String[] args". Both are for command line arguments.
-//The major difference is that C++ doesn't include the length of either arrays or strings. They have to be given that information.
-//If we were not given argc, we would continue reading random bits of memory that were stored after each string.
+//The major difference is that C++ doesn't include the length of either arrays or strings. It has to be given that information.
+//That is what argc is, the number of arguments passed from the command line, which is how the GUI will interact with the C++ program.
+//If we were not given argc, we would continue reading random bits of memory that were stored after the array. There is no "Out of Bounds Exception" to catch you when you do this.
+//argc will always be >=1 as the first argument is always the name of the program.
 //Note that we do not have "String[] args", but instead "char *argv". This is what Java does behind its complexity.
 //Each String is not stored in the array, but rather as a memory reference. This is what we call a pointer. In C++, pointers are made with *.
 //So, this really takes an array of pointers, which each "point" to a single character. Of course, this is only a character.
