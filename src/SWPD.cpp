@@ -1,7 +1,7 @@
 //Imports for standard functions.
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <iostream>
 
 //The main function, which is called when the program is executed.
 //Note that "int argc, char *argv[]" is the same as what the main method in Java has, "String[] args". Both are for command line arguments.
@@ -24,7 +24,6 @@ int main(int argc, char *argv[])
 		printf("Needs arguments.\n\nUsage: %s [directory]", argv[0]);
 		return EXIT_FAILURE;
 	}
-
 
 	return EXIT_SUCCESS;
 }
