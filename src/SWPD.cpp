@@ -1,6 +1,7 @@
 //Imports for standard functions.
 #include <stdio.h>
 #include <stdlib.h>
+#include <string>
 #include <iostream>
 
 //The main function, which is called when the program is executed.
@@ -23,6 +24,13 @@ int main(int argc, char *argv[])
 	if(argc<2){
 		printf("Needs arguments.\n\nUsage: %s [directory]", argv[0]);
 		return EXIT_FAILURE;
+	}
+
+	//Fails if the program is supplied with more than 2 arguments. The printf statment provides an error message.
+	//If there are more than 2 arguments, that means that there is more than just the program name and directory.
+	if(argc>2){
+			printf("Too many arguments.\n\nUsage: %s [directory]", argv[0]);
+			return EXIT_FAILURE;
 	}
 
 	return EXIT_SUCCESS;
