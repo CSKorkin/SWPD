@@ -29,6 +29,7 @@ int main(int argc, char *argv[]) {
 	//Keep in mind that the first argument is the program name, so it is always at least one. We need it to be 2.
 	if (argc < 2) {
 		printf("Needs arguments.\n\nUsage: %s [directory]", argv[0]);
+		std::cerr << "Needs arguments.\n\nUsage: " << argv[0] << " [directory]";
 		return EXIT_FAILURE;
 	}
 
@@ -103,8 +104,9 @@ std::vector<std::string> ls(char* target) {
 
 			}else{
 
-			//Adds the current file name to the vector we made earlier if it is not a directory.
-			list.push_back(path);
+				//Adds the current file name to the vector we made earlier if it is not a directory.
+				std::string librarypath = std::string(path);
+				list.push_back(librarypath);
 
 			}
 
