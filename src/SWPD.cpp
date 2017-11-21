@@ -8,6 +8,7 @@
 #include <cstring>
 #include <fstream>
 
+//Providing the signature for the function we define after main where main can see it. Main can only see functions defined before it.
 std::vector<std::string> ls(char* target);
 
 //The main function, which is called when the program is executed.
@@ -29,7 +30,6 @@ int main(int argc, char *argv[]) {
 	//Keep in mind that the first argument is the program name, so it is always at least one. We need it to be 2.
 	if (argc < 2) {
 		printf("Needs arguments.\n\nUsage: %s [directory]", argv[0]);
-		std::cerr << "Needs arguments.\n\nUsage: " << argv[0] << " [directory]";
 		return EXIT_FAILURE;
 	}
 
